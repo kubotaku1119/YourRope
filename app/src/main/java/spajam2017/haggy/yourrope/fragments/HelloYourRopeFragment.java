@@ -21,7 +21,7 @@ public class HelloYourRopeFragment extends Fragment {
     /**
      * スライド数
      */
-    public static final int SLIDE_COUNT = 5;
+    public static final int SLIDE_COUNT = 3;
 
     public interface OnStartButtonClickedListener {
         void OnClicked();
@@ -94,7 +94,7 @@ public class HelloYourRopeFragment extends Fragment {
         textView.setText(getHelloTextResource());
 
         final ImageView imageView = (ImageView) view.findViewById(R.id.hello_fragment_image);
-        imageView.setImageResource(getHelloImageResource());
+//        imageView.setImageResource(getHelloImageResource());
 
         showLoginButtonIfNeeded();
     }
@@ -107,10 +107,6 @@ public class HelloYourRopeFragment extends Fragment {
                 return R.string.hello_text_1;
             case 2:
                 return R.string.hello_text_2;
-            case 3:
-                return R.string.hello_text_3;
-            case 4:
-                return R.string.hello_text_4;
         }
         return 0;
     }
@@ -123,16 +119,12 @@ public class HelloYourRopeFragment extends Fragment {
                 return R.mipmap.ic_launcher;
             case 2:
                 return R.mipmap.ic_launcher;
-            case 3:
-                return R.mipmap.ic_launcher;
-            case 4:
-                return R.mipmap.ic_launcher;
         }
         return 0;
     }
 
     private void showLoginButtonIfNeeded() {
-        if (pageIndex == 4) {
+        if (pageIndex == SLIDE_COUNT-1) {
             final View view = getView();
 
             final Button btnStart = (Button) view.findViewById(R.id.btn_hello_start);
