@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">YourRope</string>
+    <string name="app_name">君のなわ。</string>
+
+    <string name="btn_hello_start">START</string>
+    <string name="image_description_hello_image">application_explain</string>
+
+    <string name="hello_text_0">説明文0</string>
+    <string name="hello_text_1">説明文1</string>
+    <string name="hello_text_2">説明文2</string>
+    <string name="hello_text_3">説明文3</string>
+    <string name="hello_text_4">説明文4</string>
 </resources>

@@ -3,15 +3,16 @@ package spajam2017.haggy.yourrope;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import spajam2017.haggy.yourrope.R;
+
 /**
- * メイン画面
- * （ごっごの開始と終了を行う）
+ * 端末ペアリング画面
  */
-public class MainActivity extends AppCompatActivity {
+public class PairingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pairing);
     }
 }
