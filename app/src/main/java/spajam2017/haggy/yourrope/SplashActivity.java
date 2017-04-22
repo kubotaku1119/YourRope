@@ -28,6 +28,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 // TODO:テスト
                 Prefs.setFinishedHelloActivity(SplashActivity.this, false);
+                Prefs.saveTargetName(SplashActivity.this, null);
 
                 Class clazz;
                 if (Prefs.isFinishedHelloActivity(SplashActivity.this)) {

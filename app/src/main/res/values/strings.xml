@@ -9,4 +9,7 @@
     <string name="hello_text_2">説明文2</string>
     <string name="hello_text_3">説明文3</string>
     <string name="hello_text_4">説明文4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
