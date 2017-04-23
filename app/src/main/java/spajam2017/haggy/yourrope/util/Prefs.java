@@ -68,7 +68,6 @@ public class Prefs {
         editor.apply();
     }
 
-
     private static SharedPreferences getPrefs(final String name, final Context context) {
         return context.getSharedPreferences(name, Context.MODE_PRIVATE);
     }
