@@ -48,8 +48,30 @@ public class TrainInfo {
         double oldLongitude = position.longitude;
 
         // Vectorの計算
+        position.vector = geoDirection(oldLatitude, oldLongitude, position.latitude, position.longitude);
 
         position.latitude = latitude;
         position.longitude = longitude;
+    }
+
+    /**
+     * 緯度経度 lat1, lng1 の点を出発として、緯度経度 lat2, lng2 への方位
+     * 北を０度で右回りの角度０～３６０度
+     * @param lat1
+     * @param lng1
+     * @param lat2
+     * @param lng2
+     * @return
+     */
+
+     public double geoDirection(double lat1, double lng1, double lat2, double lng2) {
+        double Y = Math.cos(lng2 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180 - lat1 * Math.PI / 180);
+        double X = Math.cos(lng1 * Math.PI / 180) * Math.sin(lng2 * Math.PI / 180) - Math.sin(lng1 * Math.PI / 180) * Math.cos(lng2 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180 - lat1 * Math.PI / 180);
+        double dirE0 = 180 * Math.atan2(Y, X) / Math.PI; // 東向きが０度の方向
+        if (dirE0 < 0) {
+            dirE0 = dirE0 + 360; //0～360 にする。
+        }
+
+        return (dirE0 + 90) % 360; //(dirE0+90)÷360の余りを出力 北向きが０度の方向
     }
 }
