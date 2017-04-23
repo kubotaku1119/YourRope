@@ -10,7 +10,7 @@ public class TrainInfo {
     /**
      * ターゲット名
      */
-    public String target_name;
+    public String your_name;
 
     /**
      * 自分の名前
